@@ -2,7 +2,7 @@ import { signal, useSignal } from "@preact/signals";
 import { Button } from "../components/Button.tsx";
 import { JSXInternal } from "https://esm.sh/v95/preact@10.11.0/src/jsx.d.ts";
 
-const count = signal(Number(window.localStorage.getItem("count") || "0"));
+const count = signal(Number(window.localStorage?.getItem("count") || "0"));
 
 const decrement = (amount: number) => {
   count.value -= amount;
